@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html ng-app="myApp">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.8.2/angular.min.js"></script>
+
+</head>
+
+<body ng-controller="myCtrl">
+    <h2>Danh sách sinh viên</h2>
+
+    <table border="1">
+        <thead>
+            <th>iD</th>
+            <th>MSSV</th>
+            <th>Họ tên</th>
+            <th>Email</th>
+            <th>Địa chỉ</th>
+        </thead>
+        <tbody>
+
+        </tbody>
+
+    </table>
+    <h2>Thêm sinh viên</h2>
+  
+
+     <input type="text" placeholder="search" ></input>
+     
+    <div>
+        <input type="text" ng-model="mssv" name="mssv" placeholder="MSSV">
+        <input type="text" ng-model="hoten" name="hoten" placeholder="Họ tên">
+        <input type="text" ng-model="email" name="email" placeholder="EMAIL">
+        <input type="text" ng-model="diachi" name="diachi" placeholder="Địa chỉ">
+
+        <button ng-click="add()">Thêm</button>
+     
+       
+    </div>
+
+    <ul>
+        <table border="1">
+          <tr  ng-repeat="pro in sinhvien">
+              <td>{{pro.id}}</td>
+              <td>{{pro.mssv}}</td>
+              <td>{{pro.hoten}}</td>
+              <td>{{pro.email}}</td>
+          </tr>
+        </table>
+
+     </ul>
+    <script>
+        var app = angular.module('myApp', [])
+        app.controller('myCtrl', function ($scope) {
+            $scope.sinhvien = [];
+
+            $scope.add = function () {
+                var sv = {
+                    'id': this.sinhvien.length + 1,
+                    'mssv': this.mssv,
+                    'hoten': this.hoten,
+                    'email': this.email,
+                    'diachi': this.diachi,
+                };
+                this.sinhvien[this.sinhvien.length] = sv;
+                this.mssv=''
+            }
+        
+           
+        
+        });
+        
+       
+    </script>
+</body>
+
+</html>

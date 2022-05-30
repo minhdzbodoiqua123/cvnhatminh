@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+    .phi.active{
+        display: block;
+    }
+    .phi{
+        display:none;
+    }
+    .tb,.tb1,.tb2,.tb3{
+        color:red;
+    }
+</style>
+<body>
+    <h2>ĐẶT HÀNG</h2>
+ 
+    <form onsubmit="return check()"action="
+    ">
+    <div>
+        <label for="">Sản phẩm</label>
+        <input type="text"id="sanpham">
+        <div class="tb"></div>
+      </div>
+    
+      <label for="">Loại</label>
+    <select id="loai">
+  
+      <option value="Màu xanh">Màu xanh</option>
+      <option value="màu đỏ">Màu đỏ</option>
+
+    
+    </select>
+   
+    <div class="tb1"></div>
+    <div>
+        <label for="">Đơn giá</label>
+        <input type="text"id="don_gia">
+        <div class="tb2"></div>
+      </div>
+      <label for="">Nơi nhận hàng</label>
+      <input type="radio"name="noinhan"onclick="hien()">Nội thành
+     
+      <input type="radio"name="noinhan"onclick="hien()">Ngoại thành
+      
+        <div class="tb3"></div>
+     <div class="phi">
+       Phí vận chuyển <input type="text"value="100000">
+     </div>
+        <div>
+            <button type="submit">ĐẶT MUA</button>
+        </div>
+
+
+</form>
+  <script>  
+    var noinhan=document.getElementsByName('noinhan')
+    var phi=document.querySelector('.phi')
+
+    let sanpham=document.getElementById('sanpham')
+    let loai=document.getElementById('loai')
+
+    let tb=document.querySelector('.tb')
+    let tb1=document.querySelector('.tb1')
+    let tb2=document.querySelector('.tb2')
+    let tb3=document.querySelector('.tb3')
+
+function hien(){
+    
+    for (var i=0; i<noinhan.length; i++){
+        if(noinhan[1].checked){
+            phi.classList.add('active')
+        }
+        else{
+            phi.classList.remove('active')
+
+        }
+    }
+}
+
+function check(){
+    var kiemtraloi=false
+    if(sanpham.value.length==0){
+        tb.innerHTML='Sản phẩm không được để trống';
+        kiemtraloi=true
+    }
+    else{
+        tb.innerHTML='';
+    }
+
+    var gia = document.getElementById("don_gia");
+  
+if(isNaN(gia.value)){
+    tb2.innerHTML='Vui lòng nhập số'
+	
+    kiemtraloi=true
+
+}
+else if(parseFloat(gia.value) <= 0){
+	tb2.innerHTML='Vui lòng nhập số dương!"'
+    kiemtraloi=true
+}
+else if(gia.value.length==0){
+        tb2.innerHTML='Đơn giá không được để trống'
+    kiemtraloi=true
+
+}
+else{
+    tb2.innerHTML=''
+    
+}
+
+    if(loai.value.length==0){
+        tb1.innerHTML='Loại không được để trống '
+        kiemtraloi=true
+
+    }
+    else{
+        tb1.innerHTML=' '
+
+    }
+
+    if(!noinhan[0].checked && !noinhan[1].checked){
+        tb3.innerHTML='Không được để trống '      
+        kiemtraloi=true
+    }
+    else{
+        tb3.innerHTML=''         
+        
+    }
+
+    if(kiemtraloi==true){
+        return false
+    }
+    else{
+        alert("Bạn đã đăng kí thành công")
+    }
+}
+</script>
+</body>
+</html>

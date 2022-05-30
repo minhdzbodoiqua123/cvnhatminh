@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <img id="anh"src="./images/0.JPG" alt="">
+    
+    <button onclick="prev()">Previous</button>
+    <button onclick="First()">First</button>
+    <button onclick="Last()">Last</button>
+    <button onclick="next()">Next</button>
+
+
+
+    <script>
+        let images=['./images/0.JPG','./images/1.JPG','./images/2.JPG','./images/3.JPG','./images/4.JPG','./images/5.JPG']
+        let i=0
+
+        let anh=document.getElementById("anh")
+        function next() {
+            if(i<images.length-1) {
+                i++;
+            }
+            else {
+                i=0;
+            }
+            anh.src = images[i]
+        }
+        function First(){
+            anh.src = images[0]
+
+        }
+        
+        function Last(){
+            anh.src = images[5]
+
+        }
+        function prev(){
+            if(i==0) {
+                i=images.length-1;
+            }
+            i--;
+           anh.src=images[i];
+        }
+        </script>
+</body>
+</html>

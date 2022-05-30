@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html ng-app="myModule">
+     <head>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.8.2/angular.min.js"></script>
+        
+          <style>
+               table, th, td
+               {
+                    border: 1px solid grey;
+                    border-collapse: collapse;
+                    padding: 5px;
+               }
+               table tr:nth-child(odd)
+               {
+                    background-color: #ffe6e6;
+               }
+               table tr:nth-child(even)
+               {
+                    background-color: #ccffcc;
+               }
+          </style>
+     </head>
+     <body style="font-family:Arial; font-size:medium; color:darkblue">
+          <div ng-controller="myCont">
+               <h3>Search functionality in AngularJS.</h3>
+               <br/>
+               <h3> Search Employee : <input type="text" ng-model= "searchEmp"/></h3>
+               <br/><br/>
+               <div>
+                <input type="text" ng-model="msp" name="mssv" placeholder="Mã sản phẩm">
+                <input type="text" ng-model="tensanpham" name="hoten" placeholder="Tên sản phẩm">
+                <input type="text" ng-model="gia" name="email" placeholder="Gía ">
+                <input type="text" ng-model="soluong" name="diachi" placeholder="Số lượng">
+                <input type="text" ng-model="mota" name="diachi" placeholder="Mô tả">
+                <input type="text" ng-model="ngaynhap" name="diachi" placeholder="Ngày nhập">
+        
+                <button ng-click="add()">Thêm</button>
+            </div>
+               <table>
+                    <tr>
+                         <th>FirstName</th>
+                         <th>LastName</th>
+                         <th>Gender</th>
+                         <th>Address</th>
+                    </tr>
+                    <tr ng-repeat="e in Emp | filter:searchEmp">
+                         <td>{{e.FirstName}}</td>
+                         <td>{{e.LastName}}</td>
+                         <td>{{e.Gender}}</td>
+                         <td>{{e.Address}}</td>
+                    </tr>
+               </table>
+          </div>
+     </body>
+     <script>
+         var myApp = angular.module("myModule", []);
+        var myController = function ($scope)
+     {
+          var Employee = [
+          {
+               LastName: "Parihar",Gender: "Male",Address: "Pune",
+          },
+          {
+               FirstName: "Shiva",LastName: "Parihar",Gender: "Male",Address: "Pune",
+          },
+          {
+               FirstName: "Mili",LastName: "Zen",Gender: "Female",Address: "US",
+          },
+          {
+               FirstName: "Divya",LastName: "Singh",Gender: "Female",Address: "Nagpur",
+          },
+          {
+               FirstName: "Digvijay",LastName: "Chauhan",Gender: "Male",Address: "Pune",
+          }];
+     $scope.Emp = Employee;
+     };
+myApp.controller("myCont", myController);
+     </script>
+</html>

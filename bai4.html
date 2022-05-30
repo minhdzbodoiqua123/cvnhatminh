@@ -1,0 +1,253 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+    .container {
+        box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
+        padding: 20px;
+    }
+
+    .hello {
+        border: none;
+    }
+
+    .hello:hover {
+        background-color: blue !important;
+    }
+
+    .flex {
+        display: flex;
+        align-items: center;
+    }
+
+    .flex label {
+        width: 100px;
+    }
+
+    .tb,
+    .tb1,
+    .tb2,
+    .tb3,
+    .tb4,
+    .tb5 {
+        color: red;
+        margin: 10px 0;
+    }
+</style>
+
+<body>
+
+    <div class="container" style="width:600px;display:block;margin:0 auto;">
+        <h2 style="text-align:center;">Form Đăng ký</h2>
+
+        <form action="" onsubmit="return check()">
+            <div class="flex">
+                <label style="display:block;margin:15px 5px 0 0;" for="">
+                    Họ
+                </label>
+                <input style="width:100%;height:25px;" type="text" id="ho">
+            </div>
+            <div class="tb"></div>
+
+            <div class="flex" style="margin:15px 5px 0 0;">
+                <label style="display:block;margin:15px 5px 0 0;" for="">
+                    Tên
+                </label>
+                <input style="width:100%;height:25px;" type="text" id="ten">
+            </div>
+            <div class="tb1"></div>
+            <div class="flex" style="margin:15px 5px 0 0;">
+                <label style="display:block;margin:15px 5px 0 0;" for="">
+                    Ngày sinh
+                </label>
+                <p style="padding: 0 10px;">Ngày</p><input style="width:15%;height:25px;" type="number" name="date"
+                                                                                                                                        min="1">
+                <p style="padding:0 10px;">Tháng</p><input style="width:15%;height:25px;" type="number" name="date"
+                                                                                                                                        min="1">
+                <p style="padding:0 10px;">Năm</p><input style="width:15%;height:25px;" type="number" name="date"
+                                                                                                                                        min="1">
+
+            </div>
+            <div class="tb5">
+            </div>
+
+            <div class="flex" style="margin:15px 5px 0 0;">
+                <label style="width:74px;" for="">
+                    Giới tính
+                </label>
+                <input type="radio" name="gioitinh"> Nam
+                <input type="radio" name="gioitinh"> Nữ
+
+            </div>
+            <div class="tb2"></div>
+
+            <div class="flex" style="margin:15px 5px 0 0;">
+                <label style="display:block;margin:15px 5px 0 0;" for="">
+                    Số điện thoại
+                </label>
+                <input style="width:100%;height:25px;" type="text" id="sdt">
+            </div>
+            <div class="tb3"></div>
+
+            <div class="flex" style="margin:15px 5px 0 0;">
+                <label for="">Sở thích</label>
+                <input type="checkbox" style="margin-right:5px;" name="hobbies" value="Đọc sách"> Đọc sách
+                <input type="checkbox" style="margin-right:5px;" name="hobbies" value="Xem phim"> Xem phim
+                <input type="checkbox" style="margin-right:5px;" name="hobbies" value="Nghe nhạc"> Nghe nhạc
+                <input type="checkbox" style="margin-right:5px;" name="hobbies" value="May vá"> May vá
+                <input type="checkbox" style="margin-right:5px;" name="hobbies" value="Đá bóng"> Đá bóng
+                <input type="checkbox" style="margin-right:5px;" id="a" name="hobbies" onclick="hienthi(check)"> Khác
+
+            </div>
+            <p id="khac" style="display:none;">
+                <label for="">Sở thích khác</label>
+                <input type="text">
+            </p>
+            <div class="tb4"></div>
+
+
+            <div align="right" style="margin-top:20px;">
+                <button class="hello" type="submit"
+                                                                                                                                        style="margin-right:5px;background-color: aquamarine;padding: 8px;border:none;color: white;cursor: pointer;">Đăng
+                    ký</button>
+
+            </div>
+
+        </form>
+
+
+
+    </div>
+
+
+    <script>
+        var a = document.getElementById("a")
+        var ho = document.getElementById('ho');
+        var ten = document.getElementById('ten');
+        var date = document.getElementsByName('date')
+        var gioitinh = document.getElementsByName('gioitinh')
+        var sdt = document.getElementById('sdt');
+        var hobbies = document.getElementsByName('hobbies')
+
+
+        var tb = document.querySelector('.tb')
+        var tb1 = document.querySelector('.tb1')
+        var tb2 = document.querySelector('.tb2')
+        var tb3 = document.querySelector('.tb3')
+        var tb4 = document.querySelector('.tb4')
+        var tb5 = document.querySelector('.tb5')
+
+
+
+
+        function hienthi() {
+
+            let khac = document.getElementById('khac')
+            khac.style.display = a.checked ? 'block' : 'none'
+
+        }
+        function check() {
+            let kiemtraloi = false
+
+            //Kiểm tra  họ
+            if (ho.value == '') {
+                tb.innerHTML = 'Họ không được để trống'
+                kiemtraloi = true;
+            }
+            else {
+                tb.innerHTML = ''
+
+            }
+
+            //Kiểm tra  tên
+
+            if (ten.value == '') {
+                tb1.innerHTML = 'Tên không được để trống'
+                kiemtraloi = true;
+
+            }
+            else {
+                tb1.innerHTML = ''
+
+            }
+
+            //kiem tra ngày sinh
+            for (var i = 0; i < date.length; i++) {
+                if (date[i].value == '') {
+                    tb5.innerHTML = 'Ngày Tháng Năm không được để trống'
+                    kiemtraloi = true;
+                }
+                else {
+                    tb5.innerHTML = ''
+                }
+            }
+
+            //Kiểm tra giới tính
+            for (var i = 0; i < gioitinh.length; i++) {
+                if (!gioitinh[0].checked && !gioitinh[1].checked) {
+                    tb2.innerHTML = 'Chọn ít nhất 1 giới tính'
+                    kiemtraloi = true;
+
+
+                }
+                else {
+                    tb2.innerHTML = ''
+
+                }
+            }
+
+            //Kiểm tra số điện thoại
+            if (sdt.value == '') {
+                tb3.innerHTML = 'Số điện thoại không được để trống'
+                loisdt = true;
+
+            }
+            else {
+                tb3.innerHTML = ''
+                if (isNaN(sdt.value)) {
+                    tb3.innerHTML = 'Số điện thoại phải là số'
+                    kiemtraloi = true;
+                }
+                else if (sdt.value.length < 10 || sdt.value.length > 11) {
+                    tb3.innerHTML = 'Số điện thoại phải là số và từ 10 đến 11 chữ số'
+                    kiemtraloi = true;
+                }
+                else {
+                    tb3.innerHTML = ''
+                }
+            }
+
+            //Kiểm tra sở thích
+            let test = 0;
+            for (var i = 0; i < hobbies.length; i++) {
+                if (hobbies[i].checked == true) {
+                    test++;
+                    tb4.innerHTML = '';
+
+                }
+            }
+            if (test == 0) {
+                tb4.innerHTML = 'Chọn ít nhất 1 sở thích'
+                kiemtraloi = true;
+            }
+
+
+
+            if (kiemtraloi == true) {
+                return false;
+            }
+            else {
+                alert("Đăng ký thành công")
+            }
+        }
+    </script>
+
+</body>
+
+</html>

@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html ng-app="myApp">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.8.2/angular.min.js"></script>
+
+</head>
+<style>
+    table,th,td{
+        border-collapse: collapse;
+        padding: 10px;
+    }
+    .container{
+        width:900px;
+        margin: 0 auto;
+    }
+</style>
+<body ng-controller="myCtrl">
+   
+
+
+    <h2 style="text-align: center;">Tìm kiếm sinh viên theo tên</h2>
+  
+
+    
+    <input style="margin:0 auto;display:block;"type="text"style="display:block;" placeholder="search"ng-model="search.tensanpham" ></input>
+    <div class="container">
+        <div >
+            <input type="text"style="display:block;" ng-model="msp" name="mssv" placeholder="Mã sản phẩm">
+            <input type="text"style="display:block;" ng-model="tensanpham" name="hoten" placeholder="Tên sản phẩm">
+            <input type="text"style="display:block;" ng-model="gia" name="email" placeholder="Gía ">
+            <input type="text"style="display:block;" ng-model="soluong" name="diachi" placeholder="Số lượng">
+            <input type="text"style="display:block;" ng-model="mota" name="diachi" placeholder="Mô tả">
+            <input type="text"style="display:block;" ng-model="ngaynhap" name="diachi" placeholder="Ngày nhập">
+    
+            <button ng-click="add()">Thêm</button>
+        </div>
+        <ul>
+            <table style="margin-top:50px;width:900px;"border="1">
+              <tr  ng-repeat="pro in sanpham | filter:search">
+                <td>{{pro.id}}</td>
+                <td>{{pro.tensanpham}}</td>
+                <td>{{pro.gia}}</td>
+                <td>{{pro.soluong}}</td>
+                <td>{{pro.mota}}</td>
+                <td>{{pro.ngaynhap}}</td>
+                
+              </tr>
+            </table>
+    
+         </ul>
+    </div>
+
+  
+    <script>
+       var app = angular.module('myApp', [])
+        app.controller('myCtrl', function ($scope) {
+            $scope.sanpham = [];
+            $scope.add = function () {
+                var sp = {
+                    'id': this.sanpham.length + 1,
+                    'tensanpham': this.tensanpham,
+                    'gia':this.gia,
+                    'soluong':this.soluong,
+                    'mota':this.mota,
+                    'ngaynhap':this.ngaynhap
+                };
+                this.sanpham[this.sanpham.length] = sp;
+                this.msp=''
+                this.tensanpham=''
+                this.gia=''
+                this.soluong=''
+                this.mota=''
+                this.ngaynhap=''
+        
+            }
+        });
+     
+       
+    </script>
+</body>
+
+</html>

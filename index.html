@@ -1,0 +1,650 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link href="./output.css" rel="stylesheet" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
+      integrity="sha512-SfTiTlX6kk+qitfevl/7LibUOeJWlt9rbyDn92a1DqWOw9vWG2MFoays0sgObmWazO5BQPiFucnnEAjpAB+/Sw=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+  </head>
+  <body class="bg-primary">
+    <!-- HEADER -->
+    <div
+      class="2xl:container 2xl:mx-auto xl:container xl:mx-auto lg:container lg:mx-auto md:container md:mx-auto sm:container sm:mx-auto flex justify-between items-center px-10 bg-bg-color 2xl:mt-7 mt-4"
+    >
+      <img class="w-14 xl:w-16 2xl:w-28" src="./images/nmlogo.png" alt="" />
+      <ul
+        id="menu"
+        class="hidden fixed top-0 left-0 w-full h-screen bg-green-500 flex flex-col justify-center items-center 2xl:relative 2xl:h-auto 2xl:bg-transparent 2xl:flex 2xl:flex-row 2xl:space-x-4 2xl:justify-end xl:relative xl:h-auto xl:bg-transparent xl:flex xl:flex-row xl:space-x-4 xl:justify-end"
+      >
+        <li>
+          <a
+            class="block p-3 text-white 2xl:text-white hover:text-red-400"
+            href="#"
+            >HOME</a
+          >
+        </li>
+        <li>
+          <a
+            class="block p-3 text-white 2xl:text-white hover:text-red-400"
+            href="#"
+            >ABOUT</a
+          >
+        </li>
+        <li>
+          <a
+            class="block p-3 text-white 2xl:text-white hover:text-red-400"
+            href="#"
+            >CONTACT</a
+          >
+        </li>
+        <li>
+          <a
+            class="block p-3 text-white 2xl:text-white hover:text-red-400"
+            href="#"
+            >PORTFOLIO</a
+          >
+        </li>
+        <li>
+          <button
+            class="px-12 py-2 bg-button text-white rounded-l-3xl rounded-r-3xl"
+          >
+            CV
+          </button>
+        </li>
+      </ul>
+      <div
+        class="z-10 xl:hidden 2xl:hidden cursor-pointer text-white"
+        id="menu-icon"
+      >
+        <svg
+          xmlns="http://www.w3.org/2000/svg"
+          class="h-7 w-7"
+          id="dau_menu"
+          fill="none"
+          viewBox="0 0 24 24"
+          stroke="currentColor"
+          stroke-width="2"
+        >
+          <path
+            stroke-linecap="round"
+            stroke-linejoin="round"
+            d="M4 6h16M4 12h16M4 18h16"
+          />
+        </svg>
+        <svg
+          class="hidden"
+          width="23"
+          id="dau_x"
+          height="23"
+          viewBox="0 0 23 23"
+          fill="none"
+          xmlns="http://www.w3.org/2000/svg"
+        >
+          <path
+            d="M6.71034 6.71806C7.10772 6.32133 7.75199 6.32133 8.14936 6.71806L11.5 10.0633L14.8507 6.71807C15.2481 6.32134 15.8923 6.32134 16.2897 6.71807C16.6871 7.1148 16.6871 7.75803 16.2897 8.15476L12.9391 11.5L16.2897 14.8452C16.6871 15.2419 16.6871 15.8852 16.2897 16.2819C15.8923 16.6786 15.2481 16.6786 14.8507 16.2819L11.5 12.9367L8.14937 16.2819C7.752 16.6786 7.10773 16.6786 6.71035 16.2819C6.31298 15.8852 6.31298 15.242 6.71035 14.8452L10.061 11.5L6.71034 8.15475C6.31297 7.75802 6.31297 7.11479 6.71034 6.71806Z"
+            fill="white"
+          />
+          <path
+            fill-rule="evenodd"
+            clip-rule="evenodd"
+            d="M5.14612 0.350564C9.33508 -0.116855 13.6649 -0.116855 17.8539 0.350564C20.3318 0.627057 22.3328 2.57574 22.6243 5.06395C23.1252 9.34008 23.1252 13.6599 22.6243 17.9361C22.3328 20.4243 20.3318 22.3729 17.8539 22.6494C13.6649 23.1169 9.33508 23.1169 5.14612 22.6494C2.66823 22.3729 0.667199 20.4243 0.375708 17.9361C-0.125236 13.6599 -0.125236 9.34008 0.375708 5.06395C0.667199 2.57573 2.66823 0.627057 5.14612 0.350564ZM17.6278 2.36978C13.5891 1.91912 9.4109 1.91912 5.37217 2.36978C3.81949 2.54303 2.57666 3.7665 2.39702 5.29997C1.91444 9.41929 1.91444 13.5807 2.39702 17.7C2.57666 19.2335 3.81949 20.457 5.37217 20.6302C9.4109 21.0809 13.5891 21.0809 17.6278 20.6302C19.1805 20.457 20.4233 19.2335 20.603 17.7C21.0856 13.5807 21.0856 9.41929 20.603 5.29997C20.4233 3.7665 19.1805 2.54303 17.6278 2.36978Z"
+            fill="white"
+          />
+        </svg>
+      </div>
+    </div>
+    <div
+      class="2xl:container 2xl:mx-auto xl:container xl:mx-auto lg:container lg:mx-auto md:container md:mx-auto sm:container sm:mx-auto px-10"
+    >
+      <div
+        class="grid 2xl:grid-cols-2 xl:grid-cols-2 mt-6 gap-x-8 xl:justify-start md:justify-start sm:justify-start"
+      >
+        <div class="text-white mt-16">
+          <p>Hello 👋, I'm</p>
+          <h1 class="2xl:text-7xl text-5xl my-5">NhatMinh’s</h1>
+          <p class="text-button mt-3">Full stack developer</p>
+          <p class="mt-3">
+            I'm a computer technician with a focus on web development with
+            JavaScript.
+          </p>
+          <button class="bg-button mt-9 py-3 px-14 rounded-2xl">Contact</button>
+        </div>
+        <div class="hidden 2xl:block xl:block">
+          <img
+            id="slide_show"
+            class="rounded-xl 2xl:h-96 xl:h-full"
+            src="./images/slide1.jpeg"
+            alt=""
+          />
+        </div>
+      </div>
+
+      <p class="text-white mt-24 text-2xl sm:text-center md:text-center">
+        About me
+      </p>
+      <div
+        class="grid 2xl:grid-cols-2 xl:grid-cols-2 grid-cols-1 justify-start mt-6 gap-x-8 2xl:mb-28 xl:mb-28 mb-16 sm:text-center md:text-center"
+      >
+        <div class="text-white">
+          <p>I'm a computer technician with a great passion for programming.</p>
+          <p class="mt-6">
+            Improved my skills as a Front-End and Back-End developer
+          </p>
+          <p class="mt-11">
+            I develop websites and applications using HTML, CSS, and JavaScript.
+          </p>
+          <p class="">
+            I'm always improving myself with each project I get my hands on.
+          </p>
+          <p class="mt-11">
+            I am a dedicated person who pursues his dreams, hardworking and
+            results oriented, I always seek to achieve my best version.
+          </p>
+          <p class="text-button 2xl:mt-6 mt-14">Here are my main skills:</p>
+          <div
+            class="mt-5 flex items-center justify-center 2xl:justify-start xl:justify-start lg:justify-start 2xl:mb-0 xl:mb-0 mb-14"
+          >
+            <img
+              class="w-10 mr-3"
+              src="https://s3-alpha-sig.figma.com/img/3730/411e/cb7906b8ded408e35c8772ef90828c48?Expires=1654473600&Signature=hA0Y8zsfoeGo9Sq~lHByXm5rKmDeLwbHRHPese7GaUE93ICF0gva9RcG0eVj4bQeTjF~JFKGk7~MBv44SYAJrtOhY36WoT2mE0qXiJ98gV-tBPDPI2bITqFJ4p6ffWeyyKzH~g6f-DeFtFqCACK9Ptr4vAgwz21rkkUvJwHIR9RLXGTJoRj4dqajK2XSQ5MX~Q4wFV-Mvi0AA4HrBjln1LNN6m-r~e0gYKKD1ETH283ly2-Hqe-R6dng43O9Ur9adfqjVGPJv-X-PIRqt~xRF8kugTEB04n8V2e-yhwd10NZjAx9~havqDTde5Tud3rckowfcKyqyGGQfhPEzWhr8w__&Key-Pair-Id=APKAINTVSUGEWH5XD5UA"
+              alt=""
+            />
+            <img src="" alt="" />
+            <svg
+              width="34"
+              class="mr-3"
+              height="34"
+              viewBox="0 0 34 34"
+              fill="none"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <path
+                d="M33.99 0H0.00996094C0.00445966 0 0 0.00445966 0 0.00996094V33.99C0 33.9955 0.00445966 34 0.00996094 34H33.99C33.9955 34 34 33.9955 34 33.99V0.00996094C34 0.00445966 33.9955 0 33.99 0Z"
+                fill="#F7DF1E"
+              />
+              <path
+                d="M21.5156 24.5703C22.1797 25.6992 23.1094 26.4961 24.6367 26.4961C25.9648 26.4961 26.8281 25.832 26.8281 24.9023C26.8281 23.8398 25.9648 23.4414 24.5039 22.7773L23.707 22.4453C21.3828 21.4492 19.8555 20.2539 19.8555 17.6641C19.8555 15.2734 21.6484 13.4141 24.5039 13.4141C26.5625 13.4141 28.0234 14.1445 29.0195 16.0039L26.5625 17.5977C26.0312 16.6016 25.4336 16.2031 24.5039 16.2031C23.5742 16.2031 22.9766 16.8008 22.9766 17.5977C22.9766 18.5273 23.5742 18.9258 24.9688 19.5234L25.7656 19.8555C28.4883 21.0508 30.0156 22.1797 30.0156 24.9023C30.0156 27.7578 27.7578 29.3516 24.7031 29.3516C21.7148 29.3516 19.7891 27.957 18.8594 26.0977L21.5156 24.5703ZM10.2266 24.8359C10.7578 25.6992 11.1562 26.4961 12.2852 26.4961C13.3477 26.4961 14.0117 26.0977 14.0117 24.5039V13.4805H17.1992V24.3711C17.1992 27.6914 15.2734 29.1523 12.418 29.1523C9.82812 29.1523 8.36719 27.8242 7.63672 26.2305L10.2266 24.8359Z"
+                fill="black"
+              />
+            </svg>
+
+            <svg
+              width="34"
+              class="mr-3"
+              height="29"
+              viewBox="0 0 34 29"
+              fill="none"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <path
+                d="M27.2 0H34L17 28.9738L0 0H6.715H13.005L17 6.71855L20.91 0H27.2Z"
+                fill="#41B883"
+              />
+              <path
+                d="M0 0L17 28.9738L34 0H27.2L17 17.3843L6.715 0H0Z"
+                fill="#41B883"
+              />
+              <path
+                d="M6.71497 0L17 17.4682L27.2 0H20.91L17 6.71855L13.005 0H6.71497Z"
+                fill="#35495E"
+              />
+            </svg>
+
+            <svg
+              width="34"
+              class="mr-3"
+              height="34"
+              viewBox="0 0 34 34"
+              fill="none"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <path
+                d="M2.125 0L4.83438 30.6L17 34L29.1614 30.6021L31.875 0H2.125Z"
+                fill="#FF5722"
+              />
+              <path
+                d="M25.9994 10.0066H17H11.7406L12.0806 13.8507H17H25.6594L24.6372 25.3767L17 27.5081L16.9936 27.5102L9.36062 25.3767L8.82724 19.3481H12.5672L12.8456 22.4761L16.9957 23.6045L17 23.6024L21.1544 22.474L21.5879 17.6056H17H8.67424L7.66699 6.25598H17H26.3309L25.9994 10.0066Z"
+                fill="#FAFAFA"
+              />
+            </svg>
+
+            <svg
+              width="34"
+              class="mr-3"
+              height="34"
+              viewBox="0 0 34 34"
+              fill="none"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <path
+                d="M2.125 0L4.83438 30.6L17 34L29.1614 30.6021L31.875 0H2.125Z"
+                fill="#2196F3"
+              />
+              <path
+                d="M26.0823 10.0066L25.7402 13.8507L24.7074 25.3746L17 27.506L16.9937 27.5081L9.29053 25.3746L8.75291 19.3481H12.5269L12.8074 22.474L16.9958 23.6045L16.9979 23.6024L21.1927 22.4719L21.7643 17.2635L8.57228 17.2996L8.19828 13.7381L22.0809 13.5745L22.3614 9.76223L7.82641 9.80261L7.58203 6.25598H17H26.418L26.0823 10.0066Z"
+                fill="#FAFAFA"
+              />
+            </svg>
+
+            <svg
+              width="39"
+              height="39"
+              viewBox="0 0 39 39"
+              fill="none"
+              xmlns="http://www.w3.org/2000/svg"
+              xmlns:xlink="http://www.w3.org/1999/xlink"
+            >
+              <rect width="39" height="39" fill="url(#pattern0)" />
+              <defs>
+                <pattern
+                  id="pattern0"
+                  patternContentUnits="objectBoundingBox"
+                  width="1"
+                  height="1"
+                >
+                  <use
+                    xlink:href="#image0_2_1064"
+                    transform="scale(0.00390625)"
+                  />
+                </pattern>
+                <image
+                  id="image0_2_1064"
+                  width="256"
+                  height="256"
+                  xlink:href="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAQAAAAEACAYAAABccqhmAAASRElEQVR4Ae2dXa8dVRnH+Qh+AmO88VI/gXjnhTFgvDAxRjTGxIgRjDEx3GDQaAQUDUYjqIAtQaHyUluBWKDy4gu2FigtFEoLoqeltD1tE0JMSMb8T7N65pyzZ/a8rGetNfP8JjmZffaePS/P///81jNr1sy+7LLr9lX8EQM84NQDCO9UeMBPwycPAAAAgAccewDxHYtPFUAVAAAAAB5w7AHEdyw+FQAVAAAAAHjAsQcQ37H4VABUAAAAAOABxx5AfMfiUwFQAQAAAIAHHHsA8R2LTwVABQAAAAAecOwBxHcsPhUAFQAAAAB4wLEHEN+x+FQAVAAAAADgAcceQHzH4lMBUAEAAACABxx7APEdi08FQAUAAAAAHnDsAcR3LD4VABUAAAAAeMCxBxDfsfhUAFQAAAAA4AHHHkB8x+JTAVABAAAAgAccewDxHYtPBUAFAAAAAB5w7AHEdyw+FQAVAAAAAHjAsQcQ37H4VABUAAAAAOABxx5AfMfiUwFQAQAAAIAHHHsA8R2LTwVABQAAAAAecOwBxHcsPhUAFQAAAAB4wLEHEN+x+FQAVAAAAADgAcceQHzH4lMBUAEAAACABxx7APEdi08FQAUAAAAAHnDsAcR3LD4VABUAAAAAeMCxBxDfsfhUAFQAAAAA4AHHHkB8x+JTAVABAAAAgAccewDxHYtPBUAFAAAAAB5w7AHEdyw+FQAVAAAAAHjAsQcQ37H4VABUAAAAAOABxx5AfMfiUwFQAQAAAIAHHHsA8R2LTwVABQAAAAAecOwBxHcsPhUAFQAAAAB4wLEHEN+x+FQAVAAAAADgAcceQHzH4lMBUAEAAACABxx7APEdi08FQAUAAAAAHnDsAcR3LD4VABUAAAAAeMCxBxDfsfhUAFQAAAAA4AHHHkB8x+JTAVABAAAAgAccewDxHYtPBUAFAAAAAB5w7AHEdyw+FQAVAAAAAHjAsQcQ37H4VABUAAAAAOABxx5AfMfiUwFQAQAAAIAHHHsA8R2LTwVABQAAAAAecOwBxHcsPhUAFQAAAAB4wLEHEN+x+FQAVAAAAADgAcceQHzH4lMBUAEAAACABxx7APEdi08FQAUAAAAAHnDsAcR3LD4VABUAAAAAeMCxBxDfsfhUAFQAAAAA4AHHHkB8x+JTAVABAAAAgAccewDxHYtPBUAFAAAAAB5w7AHEdyw+FQAVAAAAAHjAsQcQ37H4VABUAAAAAOABxx5AfMfiUwFQAQAAAIAHHHsA8R2LTwVABQAAAAAecOwBxHcsPhUAFQAAAAB4wLEHEN+x+FQAVAAAAADgAcceQHzH4lMBUAEAAACABxx7APEdi08FQAUAAAAAHnDsAcR3LL6TCuB9Nxyorth2tLp+z0r1wKHV6oljF9b+Vt99r1o06f2wjOZ37D+99t1rdr1ZXX77kUrrm03ezOZAGsz8wZsPVjc8vlJ99/GV6ntPrFTf37tS/WDvieqHfzlR3fjkiermp05WP3rqZHXL0yernzxzsvrpM29Vt/71repnf3ur+vnfT1W/+Mep6pfPnqpue/ZUdfs/365+ve/t6jf73q7u3H+6uutfp6ttB05X2w+cqe5+7kx1z/Nnqt89f6a69+DZ6r6DZ6s/vHi2uv/Q6prpHjq8Wu18abXa9fK5avfL56qHj5yrHnnlfPXoK+erP796vtpz9Hz1+GsXjbn32IVqKn+Ky3ce+2/10duOFJUUSlRpemDlnUU5Pvo9QUJgEFgmnUOT3vmGpK8f08fveGW02KxgeQRuevJE9kT4wE0H15K+qWVffhTDlggw+NivyoJgPQ8aXzd+0CG5pvDdT9z16jBV+VavCKhayuWHK7cfXSvZe+2w0cI6ZZhUVZBLtFTb/eRvjxpJzWrrEdCpUSpNw3Y+cuvhYhK/Hgu9Pn72f5XAFPa12HmxOxapAvnUdgCw2ZwW/287cCaZ2dUJp/PvKUzaz6I7DecOgE/f/doUfDL5fVQHaAov6Tw79Tn+WHFUDRTbP5BCtJzb+Mw9AGCsgbt8/94XzpoDQJfhpjxp/3PmwsJtL3wzUvldwro/+/tjU/bMZPZ9x4t2AJhSyb9MMJ0SlJAXl/bh0osZJX39mD5/3/FlmvB5hAhovEM97jFfq2d9TlNREIgpVInr+uIOAJAieXa+dM4EAFPp7Osb42IgUGLSxtynL93/el9tWH5ABDSyMaZuWtdckz+EtwgIxBattPV9GQAEv5nOHzt6ISoArt097Q6/rsHWcWbNmawbT9Dv8JUH3+iqBcuNiEBMAGiAz9Qu9Y0IXd4BQ3MHwFcfAgBjzNn1uzEBYHUDT9djSb2cYKf7GLLkYpaNJmj5w3F9bScASGHoWADQnYUeJ0EveDbpPOnGEiZ+OK6v//HfHv2U/JhjAEDX+z2V/ptFEvyCb5PNk20oQ/Lr2L6xGwBsNprF/zEA4LX1r+uh/o+kOZl0Yxkg8M0/+ehNrpsox+uxAPDe+gfN9FCapDmZdGMZAPCthwFAMJflfCwAvFz2a9OAUwADQHz7kf+0xZzPIkVgLAB0x1yu6bmVdzY8gu311bT7ou1lu1tw7hXAdY8CgBSJNQYAugSWclLCqeJYdr6tpNRylkB48PBq3ucFzB0A77/xhTW6Ssxcf5+71/Z+BD38Mtexhe1+eETnVary/9y7760l9BDP6zhVKcSatC9FPDFoSDD4Tr9HiX/ox7Yt3NU730jbcRT5VE2toPWk5I0x2EaddGOn7K1+XT+SuV8yD4kXAGiP8diEWvZ9tbYxkj9o/4Udw24wK6bVBwDthgxCx5oDgOZ4q7S2nixK7b4QKKrVBwDNhoyV9PX1AIDmeCs5LSf9wEpdi5ivuwxcKrLVBwDNhoxpkLAuANAc7y5JNAYQ6mAMOljMBZimSf0FRT8RWCCwCArr3Gh4ALAxHnV/WAMg5rl/fb/Da61frXx9ynpdv966d3kdDoR5s0nHxgYANMfWGgBjtevy/fppjI6n+Fa/DoYuB8gyzQbuEhsA0Bw/SwCoZe6iT4xlBIFlA4tibCf6OqKvsE4XXq8ZEADkAUC2e+yn5HsA0GzOWLEBAM0xtqwAdF4eS8PZrme2B1YQhQFAPgBM6nw8h2cBQLM5Y8UGADTH2LoC0ICdWDrOcj2zPKgcJG3ZJgDIBwD9qhAeb44/4wBaEjeWcQBAswHrl9Dq19JjvtZw41hazm49szugBAndN2YAoBkAKe4F0MNG6Ato0KCvmVm+IZAt4AEAzTHTSLoUky4JAoEFOpDQC4LSksxD4gUA2mOcAgDaBhBYoMMQQ/OdBYFsgQYAaI9XzCftLIOJfneAPoGaHiRzLRgtSTwmTgCgPcYxnrKzLPE3f/7AodWoDwkZ44+s3826caOEK+2YAEA7ADSGPtd0/Z4V330DpSXLHPcHALQDQJpbPnl3GVx0WqAHq1rfOlykt4vcqZlVBgBgOQCsRwQug0D4/I79p32BAAAsN+fYGAGA5THWJbrND9YISZljrhGELjoLx5qb7y83NwBYHiP5qJQqoA4cDSK6asfx+Y4kJIG7mXNMnABAtxinGhRUT/Cur9VPMMsOwzHG5rvdjA0AusVJfiqxCtgMiVn1E5DE3c05NFYAoHuM1ReQ84rA5mRv+18gmHw/wVBT873upgYA3WMlX6W4Qagtsft+NukOQxK5nzmHxAsA9I/xnftP983D7MtPEgRDDM13+hkaAPSLV/BXynsEYtJDIJjMoKIQbObDTNolbgBgWGxLGxvQFxKT6CzsYmCWGWbgEDcAMDx+uk+gpAFCfSEQLh8GLxQ3L26HZjYMWPEFAMMBoPhNHQKChgYUFXnFAACMM2eX+AGA8TGeAwQEAt10VNSTiboYmGXGGRgAjItf8J8SZ6odg/VTB1UDAlo4rqzzrBufYbm/KJ4AIA4AFFtBYIqXCOsACK+v2WX70+WLvLjlvS1vOEnKlMcNAOIBIOimH/yYcudggICuFIRjyjLPslFnkAEA8QEg3+pa+95jF0IuTXaucQPZ+gUAgI0563EFALYxnkM1kO2JxXWj8trGqADAJq51v6oFzfFw0ZhlR5afM68Hkdc2RgUANnFd5FedFky5kzB5n8CiIPJeXMMCgLjx7OLPKfcP6JkIXY4xyjJRVuKsU69vzABAegAEjaZaESQbJxACxdzOpADALrZdfTs1ECT7QdOuAWS54SYGAMNjF9t36ixUiT2FMQRJTgViB5j1bTU7ANgakxJ8osuHJT9+THcSmo8PKEGIue8DACgTAMF3ukvvwcOrMa/oRVuXrmiE/TSZm6yUTsENogGAsgEQciD0E5R0emBeBYSDZ25nUgBgF1sL35bWT6BTFYvjXFun2YqpAi6JBgCmBYCQE6WAwHSEYDhY5nYmBQB2sU3h2xJAoNMTk2M1WSmt/waxAMC0ARByJIAgWg9fjxVdu9vo2QHh4JjbmRQA2MU2h281Si/1bci6SmFyrCYrpQLYIBYAmBcAQs6k/B1DXQ0I2406j7oyEn+hSABgngBQ7qiHPtVkcn8AALA3JwCwj3FOH6eCgMljxXMGzsu2AcC8ASAfpxhJaHJvgJckzHmcAGD+ANAVAuvJZFhwzsTwsm0AMH8AyMvWTyLSlYfoORN9hXQEbhEJAPgAwJXbj5oWAQBgonABAOMBoBL7+j0rVban53bwnkbrWU4AoIMIJVY0AGAcAK7acbzSdfAw6em/JeqsfbKcTO4JKDWQc9ovADAMALrspR/NWDSZXBKL0MAs2teY70XPi+grjBDEue0TAOgHAJX7ejx225TsmXk9/Gx9JYBTgB5ilAQRANAdADrPr5f7bRAwKYlHeExVieUEAEaIkxMIAGA5ANSDrla975T8hzRaPKg79iwnANAS/JwJvmzbAKAZABrf3nSe3zWZSoGA9WhAkzsCl5mXz5vN2zU2AGBrDHW+fMvTJ7vm+NLlckPAuvxXABgKTAWwMBGu3vlGsZfFFkHyml1vdj7PX3jADW/mgoBgpv4I60mnSYviOeq9UV+eaEKmPmYqgIsVgFrJIef5fRIrx0AhgSfFxO3AEwWOdwBohNwDh9I9d19XEVKME1DLn/K4TBouk5VONFGtYuEdANadY02tr5LT6mGaKse7Xq5s2r8+75t0ACpPrUzPetc7vrwDQKVrzklXGa7YFuf8WcOSx161GBILs98GIFHXE9UqFt4BoLhq/H7uSS22qgIl8eW3H+nUoaYKQsvrioV1/0VbfKwqGSqABKcrAGDf2o9clvhDnOo0VIu+6K8tIVN+ZjIAKPjeqtVjveuVBQBYvwqQMnHmsi2z8p8+gPUktQQWAFiPcwmnAlMCg6omS29yChBKIcM5AFgHgC6dPZdg0MyUkrxtX01bfyqAdWNaUhYAbIyzrgqU9BPcbQmY8zPz1h8AbDSmFQQAwNY4p3qWfs4EHrvtFIOZOAUwLP0DUADAVgAoNvQHNCMi2WPPgkmZLzZpjLgAgObYWj9KuznFyv1EfSTqK4nhvaXrWLpAghZy7vsAAJoBIO2BwDqM1DdictNPUx7PPflKOD4A0A4AIHARAMmTn07A5caMARAA0C3O3jsGk7b8oSKIYXDW0W5wANAen7p/1PPt7RJhlpYfAHQ3Zd2gQ14DgH6xVgdYrluI18/G07xSh5/ZjT4hydvmQwzNd/oZGgD0i1fwl04J5lwNCHLJevubIBCCzXyYSbvEDQAMj60SZG7jBQQ1k+f7NSV52/tdDMwyww2s2AGAcfFTDFUm67bYqU+CWfZWvw4Eknu8OZfFEADEi7FAMMVxA9rnrOf69aSvv15mXj4fb14AMD6Gm32oZFJrWuJDRkKVolK/2MQPENgcWP6Pb1YAED+mdZ/qfFodaqV0GGpf1IFZVKkfEn7zvB5IXtsYFQDYxHWRXwWD1JWBwDOppK9DYFEQeS+dYYm1XazVAmtgkX5SSx2IsToRtR5BRq18kef19QRf9hoD2hmQ2JYb2wAHAaLL3+QTvQkEmLRck6IN2ph7wHwDTeTh/TT3exNn4tzmAQBAK4MHHHsA8R2L39Yy8JmPygEAAAA84NgDiO9YfFp5H618m84AAADgAcceQHzH4re1DHzmozoAAAAADzj2AOI7Fp9W3kcr36YzAAAAeMCxBxDfsfhtLQOf+agOAAAAwAOOPYD4jsWnlffRyrfpDAAAAB5w7AHEdyx+W8vAZz6qAwAAAPCAYw8gvmPxaeV9tPJtOgMAAIAHHHsA8R2L39Yy8JmL6uD/a35HwV1XubYAAAAASUVORK5CYII="
+                />
+              </defs>
+            </svg>
+          </div>
+        </div>
+        <div class="">
+          <img
+            class="rounded-2xl w-full h-full object-cover"
+            src="./images/meo.jpeg"
+            alt=""
+          />
+        </div>
+      </div>
+      <div>
+        <h1 class="text-4xl text-white text-center 2xl:mb-28 xl:mb-28 mb-16">
+          My portfolio
+        </h1>
+      </div>
+      <div
+        class="grid grid-cols-1 2xl:grid-cols-3 xl:grid-cols-3 border-2 border-primary rounded-xl gap-5"
+      >
+        <div class="bg-border p-5 sm:p-4 text-white rounded-xl">
+          <div class="flex items-center justify-between">
+            <svg
+              width="44"
+              height="40"
+              viewBox="0 0 44 40"
+              fill="none"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <path
+                d="M42.8333 34.5833C42.8333 35.6884 42.3943 36.7482 41.6129 37.5296C40.8315 38.311 39.7717 38.75 38.6666 38.75H5.33329C4.22822 38.75 3.16842 38.311 2.38701 37.5296C1.60561 36.7482 1.16663 35.6884 1.16663 34.5833V5.41667C1.16663 4.3116 1.60561 3.25179 2.38701 2.47039C3.16842 1.68899 4.22822 1.25 5.33329 1.25H15.75L19.9166 7.5H38.6666C39.7717 7.5 40.8315 7.93899 41.6129 8.72039C42.3943 9.50179 42.8333 10.5616 42.8333 11.6667V34.5833Z"
+                stroke="#23CE6B"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+              />
+            </svg>
+            <svg
+              width="24"
+              height="25"
+              viewBox="0 0 24 25"
+              fill="none"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <path
+                d="M16.3333 23.8333V19.6408C16.3739 19.1243 16.3041 18.605 16.1286 18.1175C15.953 17.6299 15.6756 17.1854 15.315 16.8133C18.7166 16.4342 22.2916 15.145 22.2916 9.23001C22.2913 7.71749 21.7095 6.26298 20.6666 5.16751C21.1605 3.84423 21.1256 2.38156 20.5691 1.08335C20.5691 1.08335 19.2908 0.70418 16.3333 2.68668C13.8503 2.01374 11.2329 2.01374 8.74996 2.68668C5.79246 0.70418 4.51413 1.08335 4.51413 1.08335C3.9577 2.38156 3.92278 3.84423 4.41663 5.16751C3.36593 6.27111 2.78353 7.73877 2.79163 9.26251C2.79163 15.1342 6.36663 16.4233 9.76829 16.8458C9.41187 17.2141 9.137 17.6534 8.96154 18.1349C8.78609 18.6165 8.714 19.1296 8.74996 19.6408V23.8333M8.74996 20.5833C3.33329 22.2083 3.33329 17.875 1.16663 17.3333L8.74996 20.5833Z"
+                stroke="white"
+                stroke-width="2"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+              />
+            </svg>
+          </div>
+          <p class="text-white mt-10">FCalendar</p>
+          <p class="text-white mt-5 mb-8">
+            Uma aplicação Web realizada durante o Hackathon do programa de
+            formação da . Esta aplicação.
+          </p>
+          <div class="flex">
+            <p class="mr-5 sm:mr-4">Node</p>
+            <p class="mr-5 sm:mr-4">Express</p>
+            <p class="mr-5 sm:mr-4">MySql</p>
+            <p class="mr-5 sm:mr-4">Ejs</p>
+          </div>
+        </div>
+
+        <div class="bg-border p-5 sm:p-4 text-white rounded-xl">
+          <div class="flex items-center justify-between">
+            <svg
+              width="44"
+              height="40"
+              viewBox="0 0 44 40"
+              fill="none"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <path
+                d="M42.8333 34.5833C42.8333 35.6884 42.3943 36.7482 41.6129 37.5296C40.8315 38.311 39.7717 38.75 38.6666 38.75H5.33329C4.22822 38.75 3.16842 38.311 2.38701 37.5296C1.60561 36.7482 1.16663 35.6884 1.16663 34.5833V5.41667C1.16663 4.3116 1.60561 3.25179 2.38701 2.47039C3.16842 1.68899 4.22822 1.25 5.33329 1.25H15.75L19.9166 7.5H38.6666C39.7717 7.5 40.8315 7.93899 41.6129 8.72039C42.3943 9.50179 42.8333 10.5616 42.8333 11.6667V34.5833Z"
+                stroke="#23CE6B"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+              />
+            </svg>
+            <svg
+              width="24"
+              height="25"
+              viewBox="0 0 24 25"
+              fill="none"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <path
+                d="M16.3333 23.8333V19.6408C16.3739 19.1243 16.3041 18.605 16.1286 18.1175C15.953 17.6299 15.6756 17.1854 15.315 16.8133C18.7166 16.4342 22.2916 15.145 22.2916 9.23001C22.2913 7.71749 21.7095 6.26298 20.6666 5.16751C21.1605 3.84423 21.1256 2.38156 20.5691 1.08335C20.5691 1.08335 19.2908 0.70418 16.3333 2.68668C13.8503 2.01374 11.2329 2.01374 8.74996 2.68668C5.79246 0.70418 4.51413 1.08335 4.51413 1.08335C3.9577 2.38156 3.92278 3.84423 4.41663 5.16751C3.36593 6.27111 2.78353 7.73877 2.79163 9.26251C2.79163 15.1342 6.36663 16.4233 9.76829 16.8458C9.41187 17.2141 9.137 17.6534 8.96154 18.1349C8.78609 18.6165 8.714 19.1296 8.74996 19.6408V23.8333M8.74996 20.5833C3.33329 22.2083 3.33329 17.875 1.16663 17.3333L8.74996 20.5833Z"
+                stroke="white"
+                stroke-width="2"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+              />
+            </svg>
+          </div>
+          <p class="text-white mt-10">Github Searcher</p>
+          <p class="text-white mt-5 mb-8">
+            Uma versão mais agradável para ver seu perfil do GitHub, inclui
+            visualização de dados , repositórios, compartilhamento entre outros.
+          </p>
+          <div class="flex">
+            <p class="mr-5 sm:mr-4">React</p>
+            <p class="mr-5 sm:mr-4">Typescript</p>
+            <p class="mr-5 sm:mr-4">AngularJs</p>
+          </div>
+        </div>
+
+        <div class="bg-border p-5 sm:p-4 text-white rounded-xl">
+          <div class="flex items-center justify-between">
+            <svg
+              width="44"
+              height="40"
+              viewBox="0 0 44 40"
+              fill="none"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <path
+                d="M42.8333 34.5833C42.8333 35.6884 42.3943 36.7482 41.6129 37.5296C40.8315 38.311 39.7717 38.75 38.6666 38.75H5.33329C4.22822 38.75 3.16842 38.311 2.38701 37.5296C1.60561 36.7482 1.16663 35.6884 1.16663 34.5833V5.41667C1.16663 4.3116 1.60561 3.25179 2.38701 2.47039C3.16842 1.68899 4.22822 1.25 5.33329 1.25H15.75L19.9166 7.5H38.6666C39.7717 7.5 40.8315 7.93899 41.6129 8.72039C42.3943 9.50179 42.8333 10.5616 42.8333 11.6667V34.5833Z"
+                stroke="#23CE6B"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+              />
+            </svg>
+            <svg
+              width="24"
+              height="25"
+              viewBox="0 0 24 25"
+              fill="none"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <path
+                d="M16.3333 23.8333V19.6408C16.3739 19.1243 16.3041 18.605 16.1286 18.1175C15.953 17.6299 15.6756 17.1854 15.315 16.8133C18.7166 16.4342 22.2916 15.145 22.2916 9.23001C22.2913 7.71749 21.7095 6.26298 20.6666 5.16751C21.1605 3.84423 21.1256 2.38156 20.5691 1.08335C20.5691 1.08335 19.2908 0.70418 16.3333 2.68668C13.8503 2.01374 11.2329 2.01374 8.74996 2.68668C5.79246 0.70418 4.51413 1.08335 4.51413 1.08335C3.9577 2.38156 3.92278 3.84423 4.41663 5.16751C3.36593 6.27111 2.78353 7.73877 2.79163 9.26251C2.79163 15.1342 6.36663 16.4233 9.76829 16.8458C9.41187 17.2141 9.137 17.6534 8.96154 18.1349C8.78609 18.6165 8.714 19.1296 8.74996 19.6408V23.8333M8.74996 20.5833C3.33329 22.2083 3.33329 17.875 1.16663 17.3333L8.74996 20.5833Z"
+                stroke="white"
+                stroke-width="2"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+              />
+            </svg>
+          </div>
+          <p class="text-white mt-10">Sunnyside agency</p>
+          <p class="text-white mt-5 mb-8">
+            Uma versão mais agradável para ver seu perfil do GitHub, inclui
+            visualização de dados , repositórios, compartilhamento entre outros.
+          </p>
+          <div class="flex items-center">
+            <p class="mr-5 sm:mr-4">Html</p>
+            <p class="mr-5 sm:mr-4">Css</p>
+            <p class="mr-5 sm:mr-4">JavaScript</p>
+          </div>
+        </div>
+
+        <div class="bg-border p-5 sm:p-4 text-white rounded-xl">
+          <div class="flex items-center justify-between">
+            <svg
+              width="44"
+              height="40"
+              viewBox="0 0 44 40"
+              fill="none"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <path
+                d="M42.8333 34.5833C42.8333 35.6884 42.3943 36.7482 41.6129 37.5296C40.8315 38.311 39.7717 38.75 38.6666 38.75H5.33329C4.22822 38.75 3.16842 38.311 2.38701 37.5296C1.60561 36.7482 1.16663 35.6884 1.16663 34.5833V5.41667C1.16663 4.3116 1.60561 3.25179 2.38701 2.47039C3.16842 1.68899 4.22822 1.25 5.33329 1.25H15.75L19.9166 7.5H38.6666C39.7717 7.5 40.8315 7.93899 41.6129 8.72039C42.3943 9.50179 42.8333 10.5616 42.8333 11.6667V34.5833Z"
+                stroke="#23CE6B"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+              />
+            </svg>
+            <svg
+              width="24"
+              height="25"
+              viewBox="0 0 24 25"
+              fill="none"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <path
+                d="M16.3333 23.8333V19.6408C16.3739 19.1243 16.3041 18.605 16.1286 18.1175C15.953 17.6299 15.6756 17.1854 15.315 16.8133C18.7166 16.4342 22.2916 15.145 22.2916 9.23001C22.2913 7.71749 21.7095 6.26298 20.6666 5.16751C21.1605 3.84423 21.1256 2.38156 20.5691 1.08335C20.5691 1.08335 19.2908 0.70418 16.3333 2.68668C13.8503 2.01374 11.2329 2.01374 8.74996 2.68668C5.79246 0.70418 4.51413 1.08335 4.51413 1.08335C3.9577 2.38156 3.92278 3.84423 4.41663 5.16751C3.36593 6.27111 2.78353 7.73877 2.79163 9.26251C2.79163 15.1342 6.36663 16.4233 9.76829 16.8458C9.41187 17.2141 9.137 17.6534 8.96154 18.1349C8.78609 18.6165 8.714 19.1296 8.74996 19.6408V23.8333M8.74996 20.5833C3.33329 22.2083 3.33329 17.875 1.16663 17.3333L8.74996 20.5833Z"
+                stroke="white"
+                stroke-width="2"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+              />
+            </svg>
+          </div>
+          <p class="text-white mt-10">Sunnyside agency</p>
+          <p class="text-white mt-5 mb-8">
+            Uma versão mais agradável para ver seu perfil do GitHub, inclui
+            visualização de dados , repositórios, compartilhamento entre outros.
+          </p>
+          <div class="flex items-center">
+            <p class="mr-5 sm:mr-4">Html</p>
+            <p class="mr-5 sm:mr-4">Css</p>
+            <p class="mr-5 sm:mr-4">JavaScript</p>
+          </div>
+        </div>
+
+        <div class="bg-border p-5 sm:p-4 text-white rounded-xl">
+          <div class="flex items-center justify-between">
+            <svg
+              width="44"
+              height="40"
+              viewBox="0 0 44 40"
+              fill="none"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <path
+                d="M42.8333 34.5833C42.8333 35.6884 42.3943 36.7482 41.6129 37.5296C40.8315 38.311 39.7717 38.75 38.6666 38.75H5.33329C4.22822 38.75 3.16842 38.311 2.38701 37.5296C1.60561 36.7482 1.16663 35.6884 1.16663 34.5833V5.41667C1.16663 4.3116 1.60561 3.25179 2.38701 2.47039C3.16842 1.68899 4.22822 1.25 5.33329 1.25H15.75L19.9166 7.5H38.6666C39.7717 7.5 40.8315 7.93899 41.6129 8.72039C42.3943 9.50179 42.8333 10.5616 42.8333 11.6667V34.5833Z"
+                stroke="#23CE6B"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+              />
+            </svg>
+            <svg
+              width="24"
+              height="25"
+              viewBox="0 0 24 25"
+              fill="none"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <path
+                d="M16.3333 23.8333V19.6408C16.3739 19.1243 16.3041 18.605 16.1286 18.1175C15.953 17.6299 15.6756 17.1854 15.315 16.8133C18.7166 16.4342 22.2916 15.145 22.2916 9.23001C22.2913 7.71749 21.7095 6.26298 20.6666 5.16751C21.1605 3.84423 21.1256 2.38156 20.5691 1.08335C20.5691 1.08335 19.2908 0.70418 16.3333 2.68668C13.8503 2.01374 11.2329 2.01374 8.74996 2.68668C5.79246 0.70418 4.51413 1.08335 4.51413 1.08335C3.9577 2.38156 3.92278 3.84423 4.41663 5.16751C3.36593 6.27111 2.78353 7.73877 2.79163 9.26251C2.79163 15.1342 6.36663 16.4233 9.76829 16.8458C9.41187 17.2141 9.137 17.6534 8.96154 18.1349C8.78609 18.6165 8.714 19.1296 8.74996 19.6408V23.8333M8.74996 20.5833C3.33329 22.2083 3.33329 17.875 1.16663 17.3333L8.74996 20.5833Z"
+                stroke="white"
+                stroke-width="2"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+              />
+            </svg>
+          </div>
+          <p class="text-white mt-10">Sunnyside agency</p>
+          <p class="text-white mt-5 mb-8">
+            Uma versão mais agradável para ver seu perfil do GitHub, inclui
+            visualização de dados , repositórios, compartilhamento entre outros.
+          </p>
+          <div class="flex items-center">
+            <p class="mr-5 sm:mr-4">Html</p>
+            <p class="mr-5 sm:mr-4">Css</p>
+            <p class="mr-5 sm:mr-4">JavaScript</p>
+          </div>
+        </div>
+
+        <div class="bg-border p-5 sm:p-4 text-white rounded-xl">
+          <div class="flex items-center justify-between">
+            <svg
+              width="44"
+              height="40"
+              viewBox="0 0 44 40"
+              fill="none"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <path
+                d="M42.8333 34.5833C42.8333 35.6884 42.3943 36.7482 41.6129 37.5296C40.8315 38.311 39.7717 38.75 38.6666 38.75H5.33329C4.22822 38.75 3.16842 38.311 2.38701 37.5296C1.60561 36.7482 1.16663 35.6884 1.16663 34.5833V5.41667C1.16663 4.3116 1.60561 3.25179 2.38701 2.47039C3.16842 1.68899 4.22822 1.25 5.33329 1.25H15.75L19.9166 7.5H38.6666C39.7717 7.5 40.8315 7.93899 41.6129 8.72039C42.3943 9.50179 42.8333 10.5616 42.8333 11.6667V34.5833Z"
+                stroke="#23CE6B"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+              />
+            </svg>
+            <svg
+              width="24"
+              height="25"
+              viewBox="0 0 24 25"
+              fill="none"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <path
+                d="M16.3333 23.8333V19.6408C16.3739 19.1243 16.3041 18.605 16.1286 18.1175C15.953 17.6299 15.6756 17.1854 15.315 16.8133C18.7166 16.4342 22.2916 15.145 22.2916 9.23001C22.2913 7.71749 21.7095 6.26298 20.6666 5.16751C21.1605 3.84423 21.1256 2.38156 20.5691 1.08335C20.5691 1.08335 19.2908 0.70418 16.3333 2.68668C13.8503 2.01374 11.2329 2.01374 8.74996 2.68668C5.79246 0.70418 4.51413 1.08335 4.51413 1.08335C3.9577 2.38156 3.92278 3.84423 4.41663 5.16751C3.36593 6.27111 2.78353 7.73877 2.79163 9.26251C2.79163 15.1342 6.36663 16.4233 9.76829 16.8458C9.41187 17.2141 9.137 17.6534 8.96154 18.1349C8.78609 18.6165 8.714 19.1296 8.74996 19.6408V23.8333M8.74996 20.5833C3.33329 22.2083 3.33329 17.875 1.16663 17.3333L8.74996 20.5833Z"
+                stroke="white"
+                stroke-width="2"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+              />
+            </svg>
+          </div>
+          <p class="text-white mt-10">Sunnyside agency</p>
+          <p class="text-white mt-5 mb-8">
+            Uma versão mais agradável para ver seu perfil do GitHub, inclui
+            visualização de dados , repositórios, compartilhamento entre outros.
+          </p>
+          <div class="flex items-center">
+            <p class="mr-5 sm:mr-4">Html</p>
+            <p class="mr-5 sm:mr-4">Css</p>
+            <p class="mr-5 sm:mr-4">JavaScript</p>
+          </div>
+        </div>
+      </div>
+
+      <h2 class="text-center text-white text-4xl mt-36">Contact me</h2>
+      <p class="text-center text-button mb-20">
+        If you've seen my potential or want to talk to me, don't hesitate to
+        send me a message.
+      </p>
+      <div
+        class="grid 2xl:grid-cols-2 xl:grid-cols-2 grid-cols-1 gap-y-5 gap-x-5 text-white mb-24"
+      >
+        <button
+          class="flex rounded-2xl px-1.5 bg-button justify-center align-center py-6"
+        >
+          <svg
+            class="w-8"
+            xmlns="http://www.w3.org/2000/svg"
+            xmlns:xlink="http://www.w3.org/1999/xlink"
+            viewBox="0 0 81 62"
+            fill="#fff"
+            fill-rule="evenodd"
+            stroke="#000"
+            stroke-linecap="round"
+            stroke-linejoin="round"
+          >
+            <use xlink:href="#A" x=".5" y=".5" />
+            <symbol id="A" overflow="visible">
+              <g stroke="none" fill-rule="nonzero">
+                <path
+                  d="M5.455 60.014h12.727V29.105L0 15.469V54.56c0 3.014 2.441 5.455 5.455 5.455z"
+                  fill="#4285f4"
+                />
+                <path
+                  d="M61.818 60.014h12.727c3.014 0 5.455-2.441 5.455-5.455V15.469L61.818 29.105z"
+                  fill="#34a853"
+                />
+                <path
+                  d="M61.818 5.469v23.636L80 15.469V8.197c0-6.741-7.695-10.591-13.091-6.545z"
+                  fill="#fbbc04"
+                />
+                <path
+                  d="M18.182 29.105V5.469L40 21.833 61.818 5.469v23.636L40 45.469z"
+                  fill="#ea4335"
+                />
+                <path
+                  d="M0 8.197v7.273l18.182 13.636V5.469l-5.091-3.818C7.695-2.394 0 1.456 0 8.197z"
+                  fill="#c5221f"
+                />
+              </g>
+            </symbol>
+          </svg>
+
+          <p class="ml-4">minhnnph29652@fpt.edu.vn</p>
+        </button>
+
+        <button
+          class="flex rounded-2xl px-1.5 bg-button justify-center align-center py-6"
+        >
+          <img
+            class="w-7"
+            src="./images/telephone.png"
+            style="color: #ffff;"
+            alt=""
+          />
+
+          <p class="ml-4">(+84) 83970-4123</p>
+        </button>
+      </div>
+      <div class="mx-auto mb-24">
+        <p class="text-2xl mb-5 text-white text-center">
+          Get in touch using the form below
+        </p>
+
+        <form class="w-4/5 mx-auto" action="">
+          <input
+            class="rounded-2xl w-full pl-5 py-1 h-10 bg-primary border-2 outline-0 text-white"
+            placeholder="Email"
+            type="text"
+          />
+          <textarea
+            class="w-full mt-2.5 pl-5 py-1 h-48 bg-primary rounded-2xl border-2 text-white outline-none"
+            placeholder="Leave your message"
+          ></textarea>
+        </form>
+      </div>
+      <button
+        class="px-14 py-3 bg-button text-white rounded-3xl flex mx-auto mb-24"
+      >
+        TO SEND
+      </button>
+    </div>
+    <div
+      class="bg-border grid 2xl:grid-cols-3 xl:grid-cols-3 grid-cols-1 px-10 items-center text-white"
+    >
+      <p class="2xl:p-0 xl:p-0 pt-10 text-center">NhatMinh's</p>
+      <p class="py-9 text-center">This site was made with a lot of ❤️</p>
+      <div class="flex items-center justify-center 2xl:p-0 xl:p-0 pb-10">
+        <img class="mr-3" src="./images/icons8-linkedin-40.png" alt="" />
+        <img class="mr-3" src="./images/icons8-github-40.png" alt="" />
+        <img class="mr-3" src="./images/icons8-instagram-40.png" alt="" />
+        <img class="mr-3" src="./images/icons8-discord-40.png" alt="" />
+      </div>
+    </div>
+    <script src="./app.js"></script>
+  </body>
+</html>
